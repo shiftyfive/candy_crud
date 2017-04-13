@@ -1,5 +1,41 @@
 {{> navbar }}
 <div class="container">
-  <h1>hi buddy</h1>
+  <h1>LOOK AT ALL THESE SNACKS</h1>
+</div>
+<hr>
+{{#each snacks}}
+<div class="row">
+  <div class="col-mid-2">
+    <img class="product-img" src="{{ this.snack_picture_url}}" alt="this.name">
+  </div>
 
+  <div class="col-md-6">
+    <h2><a href="/snacks/{{ this.id }}">{{ this.snack_name }}</a></h2>
+    <p>price: {{ this.price }}</p>
+    <p>rating: {{ this.rating }}</p>
+    <form action="/snacks/{{ this.id }}/edit" method="GET">
+
+      <input
+        class="btn btn-sm btn-danger"
+        type="submit"
+        name="Edit"
+        value="Edit this snack">
+
+    </form>
+
+    <form class="" action="index.html" method="POST">
+
+      <input
+       class="btn btn-sm btn-danger"
+       type="submit"
+       name="Delete"
+       value="Delete this snack? ☹️">
+
+    </form>
+
+  </div>
+
+  <hr>
+
+{{/each}}
 </div>
