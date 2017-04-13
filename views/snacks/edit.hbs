@@ -1,1 +1,41 @@
 {{> navbar }}
+
+<div class="container">
+  <h1>Edit {{ snack.title }}</h1>
+  <hr>
+  <form class="" action="/snacks" method="post">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="snack_name">Snack Name</label>
+          <input type="text" name="snack_name" value="{{ snack.snack_name}}" class="form-control" id="snack_name" placeholder="Snack Name">
+        </div>
+      </div>
+      <div class="col-md-6">
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input type="text" name="price" value="{{ snack.price }}" class="form-control" id="price" placeholder="Price">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="rating">Rating</label>
+        <input type="text" name="rating" value="{{ snack.rating }}" class="form-control" id="rating" placeholder="Rating">
+      </div>
+    </div>
+  </div>
+
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="snack_picture_url">Snack Picture</label>
+        <input type="text" name="snack_picture_url" value="{{ snack.snack_picture_url }}" class="form-control" id="snack_picture_url" placeholder="Picture URL">
+      </div>
+
+    </div>
+
+  </form>
+
+</div>
