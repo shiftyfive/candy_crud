@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
+    "web": "node ./bin/www",
     "lint": "./node_modules/.bin/eslint",
     "knex": "./node_modules/.bin/knex",
     "dev": "nodemon ./bin/www"
